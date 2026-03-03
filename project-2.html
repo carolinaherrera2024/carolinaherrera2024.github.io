@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+    <title>Chip Kidd</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-2.css">
+
+</head>
+
+<body>
+
+<!-- NAV (same as homepage) -->
+<header class="header">
+
+    <div class="header-container">
+
+        <div class="logo">
+            <a href="index.html">CAROLINA HERRERA</a>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#portfolio">WORK</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PROJECT SECTION -->
+<section class="project-wrapper">
+
+    <div class="project-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <img src="images/chipkidd-1.png" alt="Chip Kidd Spread">
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+            <img src="images/chipkidd-2.png" alt="Chip Kidd Detail">
+
+            <div class="project-text">
+                <h1>CHIP KIDD<br>Magazine Spread</h1>
+                <p>
+                These editorial magazine spreads focuses on the work and creative influence of graphic designer Chip Kidd, whose innovative approach has redefined contemporary book cover design. Known for his ability to translate complex narratives into visual concepts, Kidd combines bold typography, striking imagery, and thoughtful composition to create memorable designs. The design of these spreads reflect his visual language through strong hierarchy, intentional use of space, and a balance between editorial structure and expressive form. By emphasizing clarity, contrast, and storytelling, this project captures the essence of Kidd's design and his lasting impact on modern graphic design. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+      
+<!-- contact info -->
+    <footer id="contact" class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+
+                <p class="footer-phone">
+                    +1 (954) 696-4902
+                </p>
+
+                <p class="footer-email">
+                    <a href="mailto:carolina.hrdesigns@gmail.com" class="footer-email">carolina.hrdesigns@gmail.com</a>
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+<script>
+/* Fade IN when page loads */
+window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+});
+
+/* Fade OUT when clicking links */
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+
+        const href = this.getAttribute("href");
+
+        /* ignore anchors or external links */
+        if (!href || href.startsWith("#") || this.target === "_blank") return;
+
+        e.preventDefault();
+
+        document.body.classList.remove("page-loaded");
+        document.body.classList.add("page-exit");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+    });
+});
+</script>
+</body>
+</html>

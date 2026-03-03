@@ -1,0 +1,59 @@
+.project-page {
+    padding: 140px 40px;
+}
+
+body {
+    background: linear-gradient(
+        to right,
+        #040616 0%,
+        #0D133D 100%
+    );
+}
+
+.project-wrapper {
+    padding: 80px;
+}
+
+.project-layout {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 2;
+}
+
+.left-column img {
+    width: 100%;
+    height: auto;
+}
+
+.right-column {
+    flex: 1;
+  
+}
+
+
+.project-text h1 {
+    font-family: "Playfair", serif;
+    font-size: 56px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.project-text {
+    margin-top: 350px;
+    text-align: right;
+    max-width: 520px;
+}
+
+.project-text p {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 600px;
+
+    text-align: justify;
+    text-align-last: right;
+}

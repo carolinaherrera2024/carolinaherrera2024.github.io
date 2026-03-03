@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+    <title>Lenscape Project</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-1.css">
+
+</head>
+
+<body>
+
+<!-- NAV (same as homepage) -->
+<header class="header">
+
+    <div class="header-container">
+
+        <div class="logo">
+            <a href="index.html">CAROLINA HERRERA</a>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#portfolio">WORK</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PROJECT SECTION -->
+<section class="project-page">
+
+<div class="project-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="project-left">
+
+        <img src="images/lenscape-3.png" class="project-img">
+
+        <img src="images/lenscape-2.png" class="project-img">
+
+        <!-- FIGMA EMBED -->
+        <div class="figma-embed">
+
+            <iframe
+            src="https://embed.figma.com/proto/nIGsYVCcov2WcPahWIBTKZ/Lenscape-Wireframes?node-id=53-282&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=53%3A282&embed-host=share"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT COLUMN -->
+    <div class="project-right">
+
+        <img src="images/lenscape-1.png"
+        class="project-hero">
+
+        <div class="project-info">
+
+            <h1>LENSCAPE<br>AR App</h1>
+
+            <p>
+            Lenscape is an AR-powered city exploration app that helps users discover local history, art, and landmarks while connecting with nearby businesses and people. Immersive AR interactions allow users to earn points that can be redeemed for real-world rewards and promotions, encouraging meaningful engagement with their surroundings. The interface is designed for ease-of-use and to evoke an urban aesthetic.
+            </p>
+
+            <a href="https://carolinaherrera235.wixsite.com/lenscape"
+            target="_blank"
+            class="research-link">
+
+            Click here to see the research behind the app
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- contact info -->
+    <footer id="contact" class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+
+                <p class="footer-phone">
+                    +1 (954) 696-4902
+                </p>
+
+                <p class="footer-email">
+                    <a href="mailto:carolina.hrdesigns@gmail.com" class="footer-email">carolina.hrdesigns@gmail.com</a>
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+<script>
+/* Fade IN when page loads */
+window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+});
+
+/* Fade OUT when clicking links */
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+
+        const href = this.getAttribute("href");
+
+        /* ignore anchors or external links */
+        if (!href || href.startsWith("#") || this.target === "_blank") return;
+
+        e.preventDefault();
+
+        document.body.classList.remove("page-loaded");
+        document.body.classList.add("page-exit");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+    });
+});
+</script>
+</body>
+</html>

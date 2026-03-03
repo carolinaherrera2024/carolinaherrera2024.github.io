@@ -1,0 +1,94 @@
+.project-page {
+    padding: 140px 40px;
+}
+
+body {
+    background: linear-gradient(
+        to right,
+        #040616 0%,
+        #0D133D 100%
+    );
+}
+
+.project-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.project-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-img {
+    width: 100%;
+    display: block;
+}
+
+.figma-embed {
+    width: 100%;
+    height: 600px;
+    background: #1a1d3a;
+}
+
+.figma-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 40px;
+    height: 100%;
+}
+
+.project-hero {
+    width: 100%;
+    display: block;
+}
+
+.project-info h1 {
+    font-family: "Playfair", serif;
+    font-size: 56px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.project-info {
+    text-align: right;
+    max-width: 520px;
+    margin-top: auto;
+}
+
+.project-info p {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 500px;
+
+    text-align: justify;
+    text-align-last: right;
+}
+
+.research-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: underline;
+    transition: opacity .3s ease;
+}
+
+.research-link:hover {
+    opacity: .6;
+}
+
+

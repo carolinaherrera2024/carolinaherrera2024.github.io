@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+    <title>Inflation</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-3.css">
+
+</head>
+
+<body>
+
+<!-- NAV (same as homepage) -->
+<header class="header">
+
+    <div class="header-container">
+
+        <div class="logo">
+            <a href="index.html">CAROLINA HERRERA</a>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#portfolio">WORK</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PROJECT SECTION -->
+<section class="project-wrapper">
+
+    <div class="project-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <img src="images/inflation.png" alt="Inflation">
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+            <div class="project-text">
+                <h1>THE RISE OF INFLATION<br>Editorial Spread</h1>
+                <p>
+                This editorial spread visualizes inflation as both a financial concept and a lived experience, using expressive typography, pacing, and hierarchy to guide readers through the emotional and societal impact of rising costs. The design balances clarity with visual tension, mirroring the instability that inflation creates in everyday life. A custom digital collage introduces the tension of financial instability. Through layout, scale, and tone, the project transforms data-driven subject matter into an engaging, human-centered narrative.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+      
+<!-- contact info -->
+    <footer id="contact" class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+
+                <p class="footer-phone">
+                    +1 (954) 696-4902
+                </p>
+
+                <p class="footer-email">
+                    <a href="mailto:carolina.hrdesigns@gmail.com" class="footer-email">carolina.hrdesigns@gmail.com</a>
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">Instagram</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+<script>
+/* Fade IN when page loads */
+window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+});
+
+/* Fade OUT when clicking links */
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+
+        const href = this.getAttribute("href");
+
+        /* ignore anchors or external links */
+        if (!href || href.startsWith("#") || this.target === "_blank") return;
+
+        e.preventDefault();
+
+        document.body.classList.remove("page-loaded");
+        document.body.classList.add("page-exit");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+    });
+});
+</script>
+</body>
+</html>
