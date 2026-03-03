@@ -218,6 +218,9 @@ body {
     line-height: 1.6;
     color: #dcdcdc;
     margin-bottom: 20px;
+
+    text-align: justify;
+    text-align-last: left;
 }
 
 /* link */
