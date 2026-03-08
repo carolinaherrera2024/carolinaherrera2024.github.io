@@ -63,35 +63,35 @@
 
 
   <!-- about section -->
-<section id="about" class="about">
+    <section id="about" class="about">
 
-    <div class="about-container">
+        <div class="about-container">
 
-        <!-- left side profile pic -->
-        <div class="about-image">
-            <img src="images/profile.jpg" alt="Carolina Herrera">
+         <!-- left side profile pic -->
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Carolina Herrera">
+         </div>
+
+         <!-- right side bio -->
+            <div class="about-content">
+
+                <h2 class="about-title">
+                    Hey There! <br>I'm Carolina Herrera
+                </h2>
+
+                <p class="about-text">
+                    As a graphic designer, my focus is on creating refined, impactful visual solutions that communicate clearly and effectively. My work blends strong conceptual thinking with clean, modern design to deliver purposeful results across branding, digital, and print projects.
+                </p>
+
+                <p class="about-link">
+                    <a href="#">To view my resume, click here.</a>
+                </p>
+
+            </div>
+
         </div>
 
-        <!-- right side bio -->
-        <div class="about-content">
-
-            <h2 class="about-title">
-                Hey There! <br>I'm Carolina Herrera
-            </h2>
-
-            <p class="about-text">
-                As a graphic designer, my focus is on creating refined, impactful visual solutions that communicate clearly and effectively. My work blends strong conceptual thinking with clean, modern design to deliver purposeful results across branding, digital, and print projects.
-            </p>
-
-            <p class="about-link">
-                <a href="#">To view my resume, click here.</a>
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
     <!-- portfolio pics -->
@@ -126,6 +126,7 @@
                 <div class="project-overlay">
                     <h3> The Rise of Inflation <br> Editorial Spread </h3>
                 </div>
+            </a>
             </div>
         </div>
 
@@ -160,32 +161,32 @@
 
     </footer>
 
-<script>
-/* Fade IN when page loads */
-window.addEventListener("load", () => {
-    document.body.classList.add("page-loaded");
-});
+    <script>
+        /* Fade IN when page loads */
+        window.addEventListener("load", () => {
+        document.body.classList.add("page-loaded");
+        });
 
-/* Fade OUT when clicking links */
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function(e) {
+        /* Fade OUT when clicking links */
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function(e) {
 
-        const href = this.getAttribute("href");
+                const href = this.getAttribute("href");
 
-        /* ignore anchors or external links */
-        if (!href || href.startsWith("#") || this.target === "_blank") return;
+                /* ignore anchors or external links */
+                if (!href || href.startsWith("#") || this.target === "_blank") return;
 
-        e.preventDefault();
+                e.preventDefault();
 
-        document.body.classList.remove("page-loaded");
-        document.body.classList.add("page-exit");
+                document.body.classList.remove("page-loaded");
+                document.body.classList.add("page-exit");
 
-        setTimeout(() => {
-            window.location.href = href;
-        }, 500);
-    });
-});
-</script>
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
+            });
+        });
+    </script>
 
 </body>
 </html>
