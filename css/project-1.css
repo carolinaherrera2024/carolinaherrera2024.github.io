@@ -10,74 +10,86 @@ body {
     );
 }
 
-.project-grid {
-    max-width: 1300px;
-    margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+.project-wrapper {
+    padding: 80px;
 }
 
-.project-left {
+.project-layout {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    gap: 80px;
+    align-items: center;
 }
 
-.project-img {
-    width: 100%;
-    display: block;
+.left-column {
+    flex: 1;
 }
 
-.figma-embed {
-    width: 100%;
-    height: 600px;
-    background: #1a1d3a;
+
+
+.project-text {
+    max-width: 520px;
 }
 
-.figma-embed iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
 
-.project-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    gap: 40px;
-    height: 100%;
-}
-
-.project-hero {
-    width: 100%;
-    display: block;
-}
-
-.project-info h1 {
+.project-text h1 {
     font-family: "Playfair", serif;
     font-size: 56px;
     font-weight: 500;
-    text-align: right;
+    text-align: left;
 }
 
-.project-info {
-    text-align: right;
-    max-width: 520px;
-    margin-top: auto;
+
+.subtitle{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-.project-info p {
+
+.project-text p {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
     margin-top: 20px;
-    max-width: 500px;
-
     text-align: justify;
-    text-align-last: right;
 }
+
+
+
+.right-column {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.image-scroll{
+    display:flex;
+    gap:40px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+}
+
+.image-scroll img{
+    max-width:550px;
+    height: auto;
+    flex-shrink:0;
+}
+
+
+.figma-slide{
+    width:550px;
+    height:550px;
+    flex-shrink:0;
+    background:#1a1d3a;
+}
+
+.figma-slide iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
 
 .research-link {
     display: inline-block;
@@ -92,3 +104,21 @@ body {
 }
 
 
+/* Hide scrollbar */
+
+.image-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+
+
+.right-column::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100px;
+    height:100%;
+    background:linear-gradient(to right, #0a0f2c, transparent);
+    pointer-events:none;
+}
