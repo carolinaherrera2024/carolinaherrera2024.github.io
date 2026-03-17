@@ -178,7 +178,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 40px;
+    padding: 80px 150px;
 }
 
 /* about section pt.2 */
@@ -190,7 +190,7 @@ body {
 
 /* profile pic */
 .about-image img {
-    width: 600px;
+    width: 500px;
     height: auto;
     display: block;
 }
