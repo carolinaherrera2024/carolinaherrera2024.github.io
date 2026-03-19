@@ -64,6 +64,21 @@ body {
     overflow: hidden;
 }
 
+@keyframes project-textFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-text {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: homeFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+
 
 .image-scroll{
     display:flex;
@@ -94,4 +109,18 @@ body {
     width:100px;
     height:100%;
     pointer-events:none;
+}
+
+@keyframes image-scrollFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: homeFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.3s;
 }
