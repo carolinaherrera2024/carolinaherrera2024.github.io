@@ -79,34 +79,21 @@ body {
 
 
 
-.image-scroll {
-    display: flex;
-    gap: 40px;
 
-    overflow-x: auto;     /* 👈 ALWAYS scrollable */
+
+.image-scroll{
+    display:flex;
+    gap:40px;
+    overflow-x:auto;
     overflow-y: hidden;
-
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
-
-/* Desktop-only behavior */
-@media (hover: hover) and (pointer: fine) {
-    .image-scroll {
-        overflow-x: hidden;   /* hide by default ONLY on desktop */
-    }
-
-    .image-scroll:hover {
-        overflow-x: auto;     /* show on hover */
-    }
-}
-
 
 .image-scroll img{
     max-width:550px;
     height: auto;
     flex-shrink:0;
 }
-
 
 
 
