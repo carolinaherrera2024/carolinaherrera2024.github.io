@@ -171,6 +171,62 @@ body {
 
 
 
+/* ===== MID SCREENS (fix overlap BEFORE it breaks) ===== */
+@media (max-width: 1200px) {
+
+    .home-c,
+    .home-hr {
+        transform: none;
+    }
+
+    .home-subtitle {
+        left: -10vw;
+        top: 60px;
+    }
+
+}
+
+
+/* ===== SMALL SCREENS (switch to stacked layout) ===== */
+@media (max-width: 1100px) {
+
+    .home {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .home-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-main {
+        transform: none;
+        text-align: center;
+    }
+
+    .home-c,
+    .home-hr {
+        font-size: clamp(120px, 30vw, 250px);
+        transform: none;
+        line-height: 0.9;
+    }
+
+    .home-sub {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .home-subtitle {
+        position: static;
+        width: auto;
+        font-size: 12px;
+    }
+
+}
+
+
 
 
 /* about section */
