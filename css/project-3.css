@@ -84,6 +84,7 @@ body {
     display:flex;
     gap:40px;
     overflow-x:auto;
+    overflow-y: hidden;
     scroll-behavior:smooth;
 }
 
@@ -91,12 +92,6 @@ body {
     max-width:550px;
     height: auto;
     flex-shrink:0;
-}
-
-/* Hide scrollbar */
-
-.image-scroll::-webkit-scrollbar{
-    display:none;
 }
 
 
