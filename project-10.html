@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+    <title>The Beauty in Color</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-10.css">
+
+</head>
+
+<body>
+
+<!-- NAV (same as homepage) -->
+<header class="header">
+
+    <div class="header-container">
+
+        <div class="logo">
+            <a href="index.html">CAROLINA HERRERA</a>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#portfolio">WORK</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PROJECT SECTION -->
+<section class="project-wrapper">
+
+<div class="project-layout">
+
+    <!-- LEFT COLUMN (TEXT) -->
+    <div class="left-column">
+
+        <div class="project-text">
+
+            <h1>The Beauty<br>in Color</h1>
+
+            <h2 class="subtitle">1920 x 1080 pixels, 1 minute and 50 seconds</h2>
+
+            <p>
+            The Beauty in Color is a video piece inspired by a poem of the same name, focusing on how easily the richness in our everyday surroundings can be overlooked. The video starts in black and white to reflect a routine, almost detached perspective, and gradually transitions into color as a way of rediscovering a sense of beauty. Rather than something suddenly appearing, the transition to color represents a shift in awareness that culminates—an invitation to slow down and notice what's been there all along.  
+            </p>
+
+            <a href="https://vimeo.com/1182448489?share=copy&fl=sv&fe=ci"
+            target="_blank"
+            class="video-link">
+
+            Watch the video here
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT COLUMN (SCROLL GALLERY) -->
+    <div class="right-column">
+
+        <div class="image-scroll">
+
+            <!-- IMAGE 1 -->
+            <img src="images/b-1.png" alt="Beauty in Color 1">
+
+            <!-- IMAGE 2 -->
+            <img src="images/b-2.png" alt="Beauty in Color 2">
+            <img src="images/b-3.png" alt="Beauty in Color 3">
+            <img src="images/b-4.png" alt="Beauty in Color 4">
+            <img src="images/b-5.png" alt="Beauty in Color 5">
+            <img src="images/b-6.png" alt="Beauty in Color 6">
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- contact info -->
+    <footer id="contact" class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+
+                <p class="footer-phone">
+                    +1 (954) 696-4902
+                </p>
+
+                <p class="footer-email">
+                    <a href="mailto:carolina.hrdesigns@gmail.com" class="footer-email">carolina.hrdesigns@gmail.com</a>
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <a class="linkedin" href="https://www.linkedin.com/in/carolinaherrera-carolinahrdesigns" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="#" class="footer-link">Instagram</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+<script>
+/* Fade IN when page loads */
+window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+});
+
+/* Fade OUT when clicking links */
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+
+        const href = this.getAttribute("href");
+
+        /* ignore anchors or external links */
+        if (!href || href.startsWith("#") || this.target === "_blank") return;
+
+        e.preventDefault();
+
+        document.body.classList.remove("page-loaded");
+        document.body.classList.add("page-exit");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+    });
+});
+</script>
+</body>
+</html>
