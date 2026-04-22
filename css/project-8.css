@@ -131,6 +131,77 @@ body {
     pointer-events:none;
 }
 
+/* NAV CONTAINER */
+.project-nav {
+    position: fixed;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* ARROWS */
+.arrow {
+    position: absolute;
+    font-size: 50px;
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s ease;
+    pointer-events: auto;
+}
+
+/* LEFT + RIGHT POSITIONS */
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+/* HOVER EFFECT (arrow itself) */
+.arrow:hover {
+    transform: scale(1.2);
+    color: var(--grey);
+}
+
+/* LABEL BASE */
+.arrow::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--white);
+    opacity: 0;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+/* LEFT LABEL (starts slightly left) */
+.arrow.left::after {
+    content: "Previous project";
+    left: 60px;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+/* RIGHT LABEL (starts slightly right) */
+.arrow.right::after {
+    content: "Next project";
+    right: 60px;
+    transform: translateY(-50%) translateX(10px);
+}
+
+/* SHOW + SLIDE IN */
+.arrow:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+
+
+
 @keyframes image-scrollFadeUp {
     to {
         opacity: 1;
